@@ -10,7 +10,7 @@
     display: flex;
     width: 300px;
     flex-direction: column;
-    justify-content: space-evenly;
+    justify-content: space-between;
     align-items: center;
     background-color: #b3d4fc;
     padding: 40px;
@@ -24,4 +24,15 @@
     font-size: 232px;
     font-family: monospace;
     color: white;
+}
+
+.currentDay, .monthAndYear {
+    font-weight: lighter;
+    color: white;
+    font-size: 36px;
+}
+
+.monthAndYear {
+    color: #b3d4fc;
+    -webkit-text-stroke: 0.3px #15476d;
 }

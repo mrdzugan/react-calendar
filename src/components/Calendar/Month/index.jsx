@@ -5,7 +5,8 @@ import styles from './Month.module.css';
 
 const Month = (props) => {
 	const {year, month} = props;
-	const weeksInMonth = getWeeksInMonth(new Date(year, month));
+	const date = new Date(year, month);
+	const weeksInMonth = getWeeksInMonth(date);
 	const firstDayInMonth = new Date(year, month, 1);
 	let weekStart = startOfWeek(firstDayInMonth);
 	const newMonth = [];
@@ -15,7 +16,7 @@ const Month = (props) => {
 	}
 	return <>
 		<table className={styles.monthTable}>
-			<thead>
+			<thead className={styles.monthHead}>
 			<tr>
 				<th>S</th>
 				<th>M</th>

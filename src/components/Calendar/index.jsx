@@ -1,24 +1,30 @@
 import React, {Component} from 'react';
 import styles from './Calendar.module.css';
+import {format} from 'date-fns';
 import Month from './Month';
 
 class Calendar extends Component {
-	constructor(props) {
+	/*constructor(props) {
 		super(props);
 		this.state = {
 			currMonth: new Date().getMonth(),
 			currYear: new Date().getFullYear(),
 			daysInMonth: 0,
 		};
-	}
+	}*/
 
 	render() {
 		const date = new Date();
 		return (
 			<article className={styles.container}>
-				<div className={styles.leftSide}><h3>Friday</h3><h1 className={styles.currentDate}>{date.getDate()}</h1>
-				</div>
-				<div className={styles.rightSide}><Month year={2020} month={7}/></div>
+				<section className={styles.leftSide}>
+					<h3 className={styles.currentDay}>{format(date, 'cccc')}</h3>
+					<h1 className={styles.currentDate}>{date.getDate()}</h1>
+				</section>
+				<section className={styles.rightSide}>
+					<h3 className={styles.monthAndYear}>{format(date, 'LLLL')} {date.getFullYear()}</h3>
+					<Month year={2020} month={7}/>
+				</section>
 			</article>
 		);
 	}
