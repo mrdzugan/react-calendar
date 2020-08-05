@@ -1,0 +1,27 @@
+.container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    background-color: #15476d;
+    padding: 10px;
+}
+
+.leftSide, .rightSide {
+    display: flex;
+    width: 300px;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: #b3d4fc;
+    padding: 40px;
+}
+
+.rightSide {
+    background-color: white;
+}
+
+.currentDate {
+    font-size: 232px;
+    font-family: monospace;
+    color: white;
+}
