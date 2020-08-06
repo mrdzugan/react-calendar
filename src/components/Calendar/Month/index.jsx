@@ -11,7 +11,7 @@ const Month = (props) => {
 	let weekStart = startOfWeek(firstDayInMonth);
 	const newMonth = [];
 	for (let i = 0; i < weeksInMonth; i++) {
-		newMonth.push(<Week key={i} startOfWeek={weekStart}/>);
+		newMonth.push(<Week key={i} startOfWeek={weekStart} month={month}/>);
 		weekStart = add(weekStart, {weeks: 1});
 	}
 	return <>

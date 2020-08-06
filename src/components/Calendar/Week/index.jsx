@@ -3,7 +3,7 @@ import {add, getDate} from 'date-fns';
 import CalendarDate from './../CalendarDate';
 
 const Week = (props) => {
-	let {startOfWeek} = props;
+	let {startOfWeek, month} = props;
 
 	const isCurrentDay = () => {
 		const currDate = new Date();
@@ -14,7 +14,8 @@ const Week = (props) => {
 
 	const newWeek = [];
 	for (let i = 0; i < 7; i++) {
-		newWeek.push(<CalendarDate key={getDate(startOfWeek)} isCurrent={isCurrentDay()} date={startOfWeek}/>);
+		newWeek.push(<CalendarDate key={getDate(startOfWeek)} isCurrent={isCurrentDay()} date={startOfWeek}
+								   month={month}/>);
 		startOfWeek = add(startOfWeek, {days: 1});
 	}
 	return <tr>{newWeek}</tr>;

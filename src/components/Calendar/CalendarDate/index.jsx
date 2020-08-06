@@ -5,11 +5,10 @@ import styles from './CalendarDate.module.css';
 
 
 const CalendarDate = (props) => {
-	const {date, isCurrent} = props;
+	const {date, isCurrent,month} = props;
 
 	const isCurrentMonth = (date) => {
-		const currDate = new Date();
-		return currDate.getMonth() === date.getMonth();
+		return month === date.getMonth();
 	}
 
 	const style = classNames(
