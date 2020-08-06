@@ -29,10 +29,18 @@
 .currentDay, .monthAndYear {
     font-weight: lighter;
     color: white;
-    font-size: 36px;
+    font-size: 24px;
 }
 
 .monthAndYear {
     color: #b3d4fc;
     -webkit-text-stroke: 0.3px #15476d;
+}
+
+.monthControlContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 24px;
+    width: 224px;
 }
