@@ -30,7 +30,7 @@ class Calendar extends Component {
 		return (
 			<article className={styles.container}>
 				<section className={styles.leftSide}>
-					<h3 className={styles.currentDay}>{format(date, 'cccc')}</h3>
+					<h3 className={styles.currentDay}>{format(new Date(), 'cccc')}</h3>
 					<h1 className={styles.currentDate}>{date.getDate()}</h1>
 				</section>
 				<section className={styles.rightSide}>
